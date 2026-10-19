@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Chúc Mừng 20/10 Nguyễn Thị Kim Ngân ❤️ Special Commit For My Queen</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800;900&family=Dancing+Script:wght@700&family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Unified High-Performance Canvas (60 FPS, No Lag) -->
+    <canvas id="mainCanvas"></canvas>
+
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+        <div class="brand-badge">
+            <span style="color: #ff3b6f;">❤️</span>
+            <span>YÊU TỪ 07/11/2021 ·</span>
+            <strong>NGUYỄN THỊ KIM NGÂN</strong>
+        </div>
+
+        <div class="nav-actions">
+            <button class="action-btn-sm" id="themeBtn" onclick="toggleThemePalette()" title="Đổi tone màu phù hợp sở thích của Kim Ngân">
+                🎨 <span id="themeBtnLabel">Hoa Hồng Hoàng Gia</span>
+            </button>
+
+            <button class="action-btn-sm" onclick="toggleCinematicMode()" title="Bật chế độ chiêm ngưỡng toàn cảnh cực chill">
+                ✨ <span>Trình Diễn</span>
+            </button>
+
+            <button class="audio-btn" id="audioToggle" onclick="toggleAudio()" title="Bật/Tắt Nhạc Lãng Mạn">
+                <div class="equalizer" id="equalizer">
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                    <div class="eq-bar"></div>
+                </div>
+                <span id="audioLabel">Giai Điệu 20/10</span>
+            </button>
+
+            <button class="action-btn-sm" onclick="triggerHeartExplosion()" title="Bùng nổ pháo hoa trái tim">
+                🎆 <span>Nổ Pháo Hoa</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">✨ Chúc mừng ngày 20/10 người con gái anh yêu!</div>
+
+    <!-- Cinematic Exit Button -->
+    <button class="cinematic-exit-btn" id="cinematicExitBtn" onclick="toggleCinematicMode()">✕ Thoát Chế Độ Chiêm Ngưỡng</button>
+
+    <!-- Main Content Wrapper -->
+    <main class="main-wrapper">
+        <!-- Hero Header -->
+        <header class="hero-header">
+            <div class="badge-2010">
+                <span>🌹 HAPPY VIETNAMESE WOMEN'S DAY 20/10 🌹</span>
+            </div>
+            <h1 class="hero-title">
+                GỬI CÔNG CHÚA CỦA ANH
+                <span class="hero-name-cursive">Nguyễn Thị Kim Ngân</span>
+            </h1>
+
+            <!-- Live Anniversary Ribbon since 07/11/2021 -->
+            <div class="anniversary-ribbon">
+                <div class="anniversary-item">
+                    <span>🗓️ Yêu từ:</span>
+                    <strong style="color: #fcd34d;">07/11/2021</strong>
+                </div>
+                <div class="anniversary-item">
+                    <span>⏳ Thời gian bên nhau:</span>
+                    <strong id="liveDays" style="color: #ff3b6f;">Đang tính...</strong>
+                    <strong id="liveHours" style="color: #c084fc;">00 Giờ</strong>
+                    <strong id="liveMins" style="color: #fcd34d;">00 Phút</strong>
+                    <strong id="liveSecs" style="color: #fb7185;">00 Giây</strong>
+                </div>
+            </div>
+
+            <!-- Detailed Love Stats Grid -->
+            <div class="love-stats-grid">
+                <div class="stat-card">
+                    <div class="stat-card-icon">💓</div>
+                    <div class="stat-card-value" id="liveHeartbeats" style="color: #ff2a6d;">Đang tính...</div>
+                    <div class="stat-card-label">Nhịp Tim Vì Kim Ngân</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon">🌙</div>
+                    <div class="stat-card-value" id="liveNights" style="color: #c084fc;">0</div>
+                    <div class="stat-card-label">Đêm Thương Nhớ Em</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon">☕</div>
+                    <div class="stat-card-value" style="color: #fcd34d;">Vô Tận (∞)</div>
+                    <div class="stat-card-label">Nụ Cười Đã Trao</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-icon">👑</div>
+                    <div class="stat-card-value" style="color: #38bdf8;">100% Forever</div>
+                    <div class="stat-card-label">Độ Chiều Chuộng</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Giant Beating Heart Stage (Canvas Particle Heart) -->
+        <div class="heart-stage" id="heartStage" onclick="triggerHeartExplosion()" title="Chạm vào trái tim để bùng nổ tình yêu ❤️">
+            <div class="heart-pulse-halo"></div>
+            <div class="heart-floating-hint">
+                <span>💓 Trái Tim Đang Đập Nhịp Yêu Thương · Chạm Vào Trái Tim Hoặc Bấm Nút Gửi 👇</span>
+            </div>
+        </div>
+
+        <!-- Grand CTA Buttons -->
+        <div class="cta-container">
+            <button class="btn-grand-love" id="grandLoveBtn" onclick="triggerHeartExplosion()">
+                <span>Gửi Kim Ngân ❤️</span>
+            </button>
+            <button class="btn-reform-heart" id="reformHeartBtn" onclick="reformHeart()" style="display: none;">
+                <span>🔄 Tái Hiện Trái Tim</span>
+            </button>
+        </div>
+
+        <!-- Central Terminal Code Window -->
+        <section class="terminal-window" id="terminalSection">
+            <div class="terminal-titlebar">
+                <div class="terminal-dots">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                </div>
+                <div class="terminal-tab-pill">
+                    <span>✨ love.js — IT Romance Special Commit</span>
+                </div>
+                <div class="terminal-branch">
+                    <span>git:(main#07112021)</span>
+                </div>
+            </div>
+
+            <!-- Terminal Interactive Toolbar -->
+            <div class="terminal-toolbar">
+                <button class="terminal-action-btn" onclick="initTerminalTyping()">
+                    ▶️ <span>Chạy Lại</span>
+                </button>
+                <button class="terminal-action-btn" onclick="copyLoveCode()">
+                    📋 <span>Copy Mã</span>
+                </button>
+
+            </div>
+
+            <!-- Terminal Typing Body -->
+            <div class="terminal-body" id="terminalCode">
+                <!-- Javascript typing effect will inject content here smoothly -->
+            </div>
+
+        </section>
+
+
+
+        <!-- Interactive Express Love Modules (Tabs) -->
+        <section class="express-section">
+            <div class="tab-nav-bar">
+                <button class="tab-pill-btn active" onclick="switchExpressTab('tab-letter', this)">
+                    <span>💌 Thư Tình 20/10</span>
+                </button>
+                <button class="tab-pill-btn" onclick="switchExpressTab('tab-gift', this)">
+                    <span>🎁 Hộp Quà Bí Mật</span>
+                </button>
+                <button class="tab-pill-btn" onclick="switchExpressTab('tab-gallery', this)">
+                    <span>📸 Album Kỷ Niệm</span>
+                </button>
+                <button class="tab-pill-btn" onclick="switchExpressTab('tab-vouchers', this)">
+                    <span>🎟️ Phiếu Đặc Quyền</span>
+                </button>
+                <button class="tab-pill-btn" onclick="switchExpressTab('tab-notes', this)">
+                    <span>✍️ Chiếc Hộp Tâm Sự</span>
+                </button>
+            </div>
+
+            <!-- Tab 1: Love Letter -->
+            <div class="tab-panel active" id="tab-letter">
+                <div class="glass-box" style="text-align: center;">
+                    <div class="wax-seal-badge" style="margin: 0 auto 16px;">💌</div>
+                    <div class="letter-title">Gửi Nguyễn Thị Kim Ngân - Người Con Gái Anh Thương ❤️</div>
+                    <div class="letter-content" style="text-align: justify; max-width: 760px; margin: 0 auto;">
+Ngân yêu dấu của anh,
+
+Nhìn lại chặng đường từ ngày <strong>07/11/2021</strong> cho đến ngày hôm nay, anh nhận ra mình may mắn biết bao khi có em trong cuộc đời. Mỗi nụ cười, mỗi cử chỉ dịu dàng của Kim Ngân đều như một tia nắng sưởi ấm thế giới của anh.
+
+Nhân ngày Phụ Nữ Việt Nam 20/10, anh muốn gửi đến em trọn vẹn sự yêu thương và biết ơn chân thành nhất:
+🌸 Chúc công chúa của anh luôn rạng ngời, yêu đời và bình an.
+✨ Mọi dự định và ước mơ trong cuộc sống của em đều sẽ nở hoa rực rỡ.
+💖 Dù mai này có ra sao, anh vẫn luôn ở đây, đồng hành và yêu thương Kim Ngân nhiều hơn mỗi ngày!
+                    </div>
+                    <div style="text-align: center; margin-top: 25px;">
+                        <button class="btn-send-note" onclick="sendHugFeedback()">
+                            🤗 Gửi Lại Một Cái Ôm Ấm Áp
+                        </button>
+                    </div>
+                    <div class="letter-sign" style="max-width: 760px; margin: 30px auto 0;">
+                        Yêu Ngân từ 07/11/2021 đến mãi mãi ❤️
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 2: Magic Gift Box 20/10 -->
+            <div class="tab-panel" id="tab-gift">
+                <div class="glass-box gift-box-stage">
+                    <h3 style="font-family: 'Cinzel', serif; font-size: clamp(1.4rem, 3.5vw, 2rem); color: var(--gold); margin-bottom: 6px;">
+                        🎁 HỘP QUÀ BÍ MẬT 20/10
+                    </h3>
+                    <p style="color: var(--text-soft); font-size: 1.05rem; max-width: 520px; margin-bottom: 20px;">
+                        Một món quà độc nhất vô nhị được mã hóa bằng sự chân thành, dành trao tặng riêng cho công chúa <strong>Nguyễn Thị Kim Ngân</strong>!
+                    </p>
+
+                    <div class="gift-box-wrapper" onclick="openMagicGift()" title="Bấm vào để mở quà nè em yêu ❤️">
+                        <div class="gift-box-3d" id="giftBox3d">
+                            <div class="gift-ribbon-v"></div>
+                            <div class="gift-ribbon-h"></div>
+                            <div class="gift-bow">🎀</div>
+                        </div>
+                    </div>
+
+                    <div class="gift-instruction-badge">
+                        ✨ Chạm vào chiếc hộp quà để giải mã điều kỳ diệu!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Gallery -->
+            <div class="tab-panel" id="tab-gallery">
+                <div class="glass-box">
+                    <div class="gallery-grid">
+                        <div class="gallery-card" onclick="triggerHeartExplosion()">
+                            <img src="heart_roses.jpg" alt="Trái Tim Hoa Hồng 20/10" class="gallery-img" onerror="this.src='rose.jpg'">
+                            <div class="gallery-caption">🌹 Trái Tim Hoa Hồng Pha Lê 20/10</div>
+                            <p style="font-size: 0.85rem; color: #cbd5e1; margin-top: 4px;">Kết tinh từ ngàn đóa hồng vĩnh cửu trao tặng Kim Ngân</p>
+                        </div>
+                        <div class="gallery-card" onclick="triggerHeartExplosion()">
+                            <img src="rose.jpg" alt="Đóa Hồng Pha Lê Vĩnh Cửu" class="gallery-img">
+                            <div class="gallery-caption">✨ Đóa Hoa Hồng Pha Lê Bất Tử</div>
+                            <p style="font-size: 0.85rem; color: #cbd5e1; margin-top: 4px;">Tượng trưng cho tình cảm bền chặt khởi nguồn từ 07/11/2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 3: Vouchers -->
+            <div class="tab-panel" id="tab-vouchers">
+                <div class="glass-box">
+                    <div class="voucher-grid">
+                        <div class="voucher-item" id="v1">
+                            <div>
+                                <span style="font-size: 0.8rem; color: #fcd34d; font-weight: 700;">ĐẶC QUYỀN VIP 1</span>
+                                <div style="font-size: 2.2rem; margin: 8px 0;">👑</div>
+                                <div style="font-weight: 700; color: #ffe4e6; font-size: 1.15rem; margin-bottom: 6px;">1 Ngày Làm Công Chúa</div>
+                                <p style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;">Ngân được quyền sai bảo anh làm mọi việc từ sáng đến tối mà anh không được cãi nửa lời!</p>
+                            </div>
+                            <button class="btn-popup-close" style="margin-top: 16px; padding: 10px 20px; font-size: 0.88rem;" onclick="redeemVoucher('v1', '👑 Đã kích hoạt quyền làm công chúa của Kim Ngân!')">
+                                Sử Dụng Ngay 💕
+                            </button>
+                        </div>
+
+                        <div class="voucher-item" id="v2">
+                            <div>
+                                <span style="font-size: 0.8rem; color: #fcd34d; font-weight: 700;">ĐẶC QUYỀN VIP 2</span>
+                                <div style="font-size: 2.2rem; margin: 8px 0;">🍧</div>
+                                <div style="font-weight: 700; color: #ffe4e6; font-size: 1.15rem; margin-bottom: 6px;">Bao Ăn Toàn Tập</div>
+                                <p style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;">Bất cứ món gì Ngân thèm: Trà sữa, nướng lẩu, bánh ngọt... có mặt trong nháy mắt!</p>
+                            </div>
+                            <button class="btn-popup-close" style="margin-top: 16px; padding: 10px 20px; font-size: 0.88rem;" onclick="redeemVoucher('v2', '🍧 Kim Ngân thèm gì anh cũng bao liền!')">
+                                Sử Dụng Ngay 💕
+                            </button>
+                        </div>
+
+                        <div class="voucher-item" id="v3">
+                            <div>
+                                <span style="font-size: 0.8rem; color: #fcd34d; font-weight: 700;">ĐẶC QUYỀN VIP 3</span>
+                                <div style="font-size: 2.2rem; margin: 8px 0;">🤗</div>
+                                <div style="font-weight: 700; color: #ffe4e6; font-size: 1.15rem; margin-bottom: 6px;">Cái Ôm & Massage</div>
+                                <p style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;">Được ôm thật chặt và massage vai gáy xoa dịu mọi mệt mỏi bất cứ khi nào em cần.</p>
+                            </div>
+                            <button class="btn-popup-close" style="margin-top: 16px; padding: 10px 20px; font-size: 0.88rem;" onclick="redeemVoucher('v3', '🤗 Đang gửi một cái ôm thật ấm áp tới Ngân!')">
+                                Sử Dụng Ngay 💕
+                            </button>
+                        </div>
+
+                        <div class="voucher-item" id="v4">
+                            <div>
+                                <span style="font-size: 0.8rem; color: #fcd34d; font-weight: 700;">ĐẶC QUYỀN VIP 4</span>
+                                <div style="font-size: 2.2rem; margin: 8px 0;">💖</div>
+                                <div style="font-weight: 700; color: #ffe4e6; font-size: 1.15rem; margin-bottom: 6px;">Tha Thứ Vô Điều Kiện</div>
+                                <p style="font-size: 0.9rem; color: #cbd5e1; line-height: 1.6;">Tấm thẻ bài quyền lực: Bất kể chuyện gì, dù đúng hay sai thì Kim Ngân vẫn luôn là người đúng nhất!</p>
+                            </div>
+                            <button class="btn-popup-close" style="margin-top: 16px; padding: 10px 20px; font-size: 0.88rem;" onclick="redeemVoucher('v4', '💖 Kim Ngân luôn luôn đúng và được chiều nhất!')">
+                                Sử Dụng Ngay 💕
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab 4: Love Note Box -->
+            <div class="tab-panel" id="tab-notes">
+                <div class="glass-box">
+                    <div class="note-form">
+                        <h3 style="color: #ffd1dc; font-size: 1.4rem; margin-bottom: 6px;">💌 Chiếc Hộp Tâm Sự Dành Riêng Cho Kim Ngân</h3>
+                        <p style="color: #cbd5e1; font-size: 0.95rem;">Ngân hãy chọn một cảm xúc và gửi vài dòng nhắn nhủ ngọt ngào đến anh nhé!</p>
+
+                        <div class="emoji-selector">
+                            <button class="emoji-btn active" onclick="selectNoteEmoji('🥰', this)">🥰</button>
+                            <button class="emoji-btn" onclick="selectNoteEmoji('💖', this)">💖</button>
+                            <button class="emoji-btn" onclick="selectNoteEmoji('🌸', this)">🌸</button>
+                            <button class="emoji-btn" onclick="selectNoteEmoji('🥺', this)">🥺</button>
+                            <button class="emoji-btn" onclick="selectNoteEmoji('👑', this)">👑</button>
+                        </div>
+
+                        <textarea id="loveNoteInput" class="note-textarea" placeholder="Nhập tâm sự hoặc điều Ngân muốn nói với anh vào đây nè..."></textarea>
+
+                        <button class="btn-send-note" onclick="submitLoveNote()">
+                            Gửi Cho Anh Ngay ❤️
+                        </button>
+
+                        <div class="sent-notes-list" id="sentNotesList"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Floating Hearts Zone (Spawned after clicking button) -->
+    <div id="floatingHeartsZone"></div>
+
+    <!-- Sweet Wish Popup Overlay -->
+    <div class="wish-popup-overlay" id="wishPopupOverlay">
+        <div class="wish-popup-card">
+            <div class="popup-tag-badge" id="popupTag">[HTTP 200 OK]</div>
+            <div class="popup-heart-icon" id="popupIcon">💖</div>
+            <h2 class="popup-title" id="popupTitle">Status: 200 OK Trọn Đời</h2>
+            <div class="popup-message" id="popupMessage">
+                Chúc công chúa <strong>Nguyễn Thị Kim Ngân</strong> ngày 20/10 nụ cười luôn rạng rỡ và nhận được vạn điều ngọt ngào nhất!
+            </div>
+            <button class="btn-popup-close" onclick="closeWishPopup()">
+                Dạ, Em Yêu Anh Nhất! 🥰
+            </button>
+        </div>
+    </div>
+
+    <!-- Certificate of Love Modal Overlay -->
+    <div class="certificate-modal-overlay" id="certificateModal" onclick="closeCertificateModal(event)">
+        <div class="certificate-card" onclick="event.stopPropagation()">
+            <div class="cert-header">✦ BẢN QUYỀN TRÁI TIM #07112021-FOREVER ✦</div>
+            <div style="font-size: 2.8rem; margin: 6px 0;">👑</div>
+            <h2 class="cert-title">CHỨNG NHẬN ĐẶC BIỆT 20/10<br>NGƯỜI PHỤ NỮ TUYỆT VỜI NHẤT VŨ TRỤ</h2>
+            <div class="cert-recipient">Nguyễn Thị Kim Ngân</div>
+            <div class="cert-body">
+                "Chứng nhận cô gái mang tên <strong>Nguyễn Thị Kim Ngân</strong> chính là công chúa duy nhất, người yêu hoàn mỹ nhất và là nguồn năng lượng hạnh phúc bất tận trong cuộc đời anh kể từ ngày <strong>07/11/2021</strong> đến mãi mãi về sau."
+            </div>
+            <div class="cert-footer">
+                <div>
+                    <div class="cert-sign-title">ĐÃ ĐƯỢC CHỨNG THỰC BỞI</div>
+                    <div class="cert-sign-name">Người Yêu Của Em ❤️</div>
+                </div>
+                <div class="wax-seal-badge">👑</div>
+                <div>
+                    <div class="cert-sign-title">NGÀY PHÁT HÀNH</div>
+                    <div style="font-family: 'Fira Code', monospace; font-weight: 700; color: #b45309; margin-top: 6px;">20/10/2026</div>
+                </div>
+            </div>
+            <button class="btn-popup-close" style="margin-top: 24px; background: linear-gradient(135deg, #b45309, #d97706); box-shadow: 0 4px 20px rgba(180, 83, 9, 0.4);" onclick="closeCertificateModal()">
+                Em Đã Nhận & Yêu Anh Nhiều! 🥰
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Crafted with endless love for <strong>Nguyễn Thị Kim Ngân</strong> · In love since <strong>07/11/2021</strong> · 20/10 Forever</p>
+    </footer>
+
+    <!-- External JavaScript Controller -->
+    <script src="script.js"></script>
+</body>
+</html>

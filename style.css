@@ -1,0 +1,1443 @@
+/* ==========================================================================
+   PALETTE MÀU SẮC LÃNG MẠN, TINH TẾ & QUÝ PHÁI - CHO NGUYỄN THỊ KIM NGÂN ❤️
+   Sự kết hợp hoàn mỹ giữa Velvet Rose, Amethyst Huyền Ảo & Champagne Gold
+   Tối ưu phần cứng 60 FPS mượt mà tuyệt đối!
+   ========================================================================== */
+
+:root {
+    /* =========================================================================
+       PALETTE 1: VELVET ROSE & IMPERIAL GOLD (Mặc định - Quyến rũ & Quý phái)
+       ========================================================================= */
+    --theme-name: "Velvet Rose & Imperial Gold";
+    --bg-body: radial-gradient(circle at 50% 12%, #1e092b 0%, #11051e 40%, #06020c 100%);
+    --bg-deep: #08020d;
+    --bg-plum: #140620;
+    --bg-nav: rgba(14, 5, 24, 0.88);
+    
+    --rose-main: #ff2a6d;
+    --rose-soft: #ff758c;
+    --rose-light: #ffd1dc;
+    --rose-glow: rgba(255, 42, 109, 0.5);
+    
+    --amethyst: #a855f7;
+    --amethyst-light: #c084fc;
+    --amethyst-glow: rgba(168, 85, 247, 0.4);
+    
+    --gold: #fcd34d;
+    --gold-warm: #fbbf24;
+    --gold-glow: rgba(252, 211, 77, 0.5);
+    
+    --card-bg: rgba(22, 9, 36, 0.82);
+    --card-border: rgba(255, 117, 140, 0.32);
+    
+    --text-pure: #ffffff;
+    --text-soft: #fce7f3;
+    --text-sub: #cbd5e1;
+    --text-dim: #94a3b8;
+    
+    --terminal-bg: #0d0618;
+    --terminal-border: rgba(255, 117, 140, 0.38);
+    --terminal-tab-bg: rgba(255, 42, 109, 0.16);
+    --terminal-tab-text: #ffd1dc;
+    --terminal-tab-border: rgba(255, 117, 140, 0.38);
+    --accent-glow: 0 0 25px rgba(255, 42, 109, 0.45);
+}
+
+/* PALETTE 2: PASTEL SAKURA & PEACH (Hồng Phấn Ngọt Ngào Dịu Dàng) */
+[data-theme="sakura"] {
+    --theme-name: "Pastel Sakura & Peach";
+    --bg-body: radial-gradient(circle at 50% 12%, #2c0e25 0%, #17061a 42%, #07010c 100%);
+    --bg-deep: #0a020d;
+    --bg-plum: #18071f;
+    --bg-nav: rgba(18, 5, 22, 0.88);
+    
+    --rose-main: #fb7185;
+    --rose-soft: #f472b6;
+    --rose-light: #ffe4e6;
+    --rose-glow: rgba(251, 113, 133, 0.5);
+    
+    --amethyst: #e879f9;
+    --amethyst-light: #f0abfc;
+    --amethyst-glow: rgba(232, 121, 249, 0.4);
+    
+    --gold: #fef08a;
+    --gold-warm: #fde047;
+    --gold-glow: rgba(254, 240, 138, 0.5);
+    
+    --card-bg: rgba(28, 10, 32, 0.82);
+    --card-border: rgba(244, 114, 182, 0.35);
+    
+    --text-pure: #ffffff;
+    --text-soft: #fff1f2;
+    --text-sub: #e2e8f0;
+    --text-dim: #9ca3af;
+    
+    --terminal-bg: #110517;
+    --terminal-border: rgba(244, 114, 182, 0.42);
+    --terminal-tab-bg: rgba(244, 114, 182, 0.18);
+    --terminal-tab-text: #ffe4e6;
+    --terminal-tab-border: rgba(244, 114, 182, 0.38);
+    --accent-glow: 0 0 25px rgba(244, 114, 182, 0.45);
+}
+
+/* PALETTE 3: GALAXY NEBULA & CYBER STARLIGHT (Cực Quang Tinh Tú) */
+[data-theme="galaxy"] {
+    --theme-name: "Galaxy Nebula & Cyber Starlight";
+    --bg-body: radial-gradient(circle at 50% 12%, #1b0c3a 0%, #0d0622 42%, #03010c 100%);
+    --bg-deep: #050210;
+    --bg-plum: #100628;
+    --bg-nav: rgba(10, 4, 25, 0.88);
+    
+    --rose-main: #c084fc;
+    --rose-soft: #d8b4fe;
+    --rose-light: #f3e8ff;
+    --rose-glow: rgba(192, 132, 252, 0.5);
+    
+    --amethyst: #818cf8;
+    --amethyst-light: #a5b4fc;
+    --amethyst-glow: rgba(129, 140, 248, 0.4);
+    
+    --gold: #38bdf8;
+    --gold-warm: #67e8f9;
+    --gold-glow: rgba(56, 189, 248, 0.5);
+    
+    --card-bg: rgba(18, 10, 40, 0.82);
+    --card-border: rgba(192, 132, 252, 0.35);
+    
+    --text-pure: #ffffff;
+    --text-soft: #f5f3ff;
+    --text-sub: #cbd5e1;
+    --text-dim: #94a3b8;
+    
+    --terminal-bg: #09041a;
+    --terminal-border: rgba(192, 132, 252, 0.42);
+    --terminal-tab-bg: rgba(192, 132, 252, 0.18);
+    --terminal-tab-text: #ede9fe;
+    --terminal-tab-border: rgba(192, 132, 252, 0.38);
+    --accent-glow: 0 0 25px rgba(192, 132, 252, 0.45);
+}
+
+/* PALETTE 4: DIAMOND ICE & ROYAL VIOLET (Pha Lê Dạ Nguyệt) */
+[data-theme="diamond"] {
+    --theme-name: "Diamond Ice & Royal Violet";
+    --bg-body: radial-gradient(circle at 50% 12%, #1e103f 0%, #0c0724 42%, #02010b 100%);
+    --bg-deep: #040110;
+    --bg-plum: #120730;
+    --bg-nav: rgba(9, 4, 26, 0.88);
+    
+    --rose-main: #ec4899;
+    --rose-soft: #f472b6;
+    --rose-light: #fdf2f8;
+    --rose-glow: rgba(236, 72, 153, 0.5);
+    
+    --amethyst: #a855f7;
+    --amethyst-light: #c084fc;
+    --amethyst-glow: rgba(168, 85, 247, 0.4);
+    
+    --gold: #67e8f9;
+    --gold-warm: #a5f3fc;
+    --gold-glow: rgba(103, 232, 249, 0.5);
+    
+    --card-bg: rgba(18, 10, 44, 0.82);
+    --card-border: rgba(103, 232, 249, 0.35);
+    
+    --text-pure: #ffffff;
+    --text-soft: #faf5ff;
+    --text-sub: #cbd5e1;
+    --text-dim: #94a3b8;
+    
+    --terminal-bg: #08031a;
+    --terminal-border: rgba(103, 232, 249, 0.42);
+    --terminal-tab-bg: rgba(103, 232, 249, 0.18);
+    --terminal-tab-text: #e0f2fe;
+    --terminal-tab-border: rgba(103, 232, 249, 0.38);
+    --accent-glow: 0 0 25px rgba(103, 232, 249, 0.45);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    background: var(--bg-body);
+    color: var(--text-pure);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    line-height: 1.6;
+    transition: background 0.6s ease;
+    transform: translateZ(0); /* Hardware accelerated */
+}
+
+/* Background Canvas */
+#mainCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #070410; }
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--rose-main), var(--amethyst));
+    border-radius: 4px;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 28px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: var(--bg-nav);
+    border-bottom: 1px solid rgba(255, 117, 140, 0.2);
+    transition: background 0.6s ease;
+}
+
+.brand-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(255, 59, 111, 0.18), rgba(168, 85, 247, 0.18));
+    border: 1px solid rgba(255, 117, 140, 0.4);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #ffe4e6;
+    box-shadow: 0 0 20px rgba(255, 59, 111, 0.2);
+}
+
+.brand-badge strong {
+    color: var(--gold);
+    text-shadow: 0 0 10px rgba(252, 211, 77, 0.45);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.audio-btn, .action-btn-sm {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.audio-btn:hover, .action-btn-sm:hover {
+    background: rgba(255, 59, 111, 0.22);
+    border-color: var(--rose-soft);
+    transform: translateY(-2px);
+}
+
+.equalizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 14px;
+}
+
+.eq-bar {
+    width: 3px;
+    background: var(--rose-soft);
+    border-radius: 2px;
+    height: 4px;
+    transition: height 0.2s ease;
+}
+
+.equalizer.playing .eq-bar:nth-child(1) { animation: eq 0.8s ease-in-out infinite alternate; }
+.equalizer.playing .eq-bar:nth-child(2) { animation: eq 0.5s ease-in-out infinite alternate 0.2s; }
+.equalizer.playing .eq-bar:nth-child(3) { animation: eq 1s ease-in-out infinite alternate 0.4s; }
+
+@keyframes eq {
+    from { height: 3px; }
+    to { height: 14px; }
+}
+
+/* Main Container */
+.main-wrapper {
+    position: relative;
+    z-index: 10;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 95px 20px 80px;
+}
+
+/* Hero Section */
+.hero-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.badge-2010 {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, rgba(255, 59, 111, 0.22), rgba(168, 85, 247, 0.22));
+    border: 1px solid rgba(255, 117, 140, 0.45);
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 0.92rem;
+    color: #fbcfe8;
+    font-weight: 700;
+    letter-spacing: 1px;
+    box-shadow: 0 0 25px rgba(255, 59, 111, 0.3);
+    margin-bottom: 16px;
+    animation: floatBadge 3s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.25;
+    background: linear-gradient(135deg, #ffffff 15%, #ffd1dc 45%, #ff758c 75%, #f43f5e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 35px rgba(255, 59, 111, 0.4);
+}
+
+.hero-name-cursive {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2.8rem, 6.5vw, 4.6rem);
+    color: var(--gold);
+    display: block;
+    margin-top: 4px;
+    font-weight: 700;
+    text-shadow: 0 0 25px rgba(252, 211, 77, 0.55);
+}
+
+/* Anniversary Live Ribbon & Stats Grid */
+.anniversary-ribbon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 18px auto 16px;
+    padding: 12px 28px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 117, 140, 0.35);
+    border-radius: 50px;
+    max-width: 860px;
+    font-size: 0.95rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.anniversary-item strong {
+    color: var(--gold);
+    font-family: 'Fira Code', monospace;
+    font-size: 1.15rem;
+}
+
+/* Detailed Love Stats Grid */
+.love-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    max-width: 860px;
+    margin: 0 auto 28px;
+}
+
+.stat-card {
+    background: rgba(22, 10, 36, 0.7);
+    border: 1px solid rgba(255, 117, 140, 0.22);
+    border-radius: 18px;
+    padding: 14px 18px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    transition: all 0.25s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--rose-soft);
+    box-shadow: 0 10px 25px rgba(255, 59, 111, 0.2);
+}
+
+.stat-card-icon {
+    font-size: 1.6rem;
+    margin-bottom: 4px;
+}
+
+.stat-card-value {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin: 2px 0;
+}
+
+.stat-card-label {
+    font-size: 0.8rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ==========================================================
+   TERMINAL CODE WINDOW (HARMONIOUS PASTEL SYNTAX COLORS)
+   ========================================================== */
+.terminal-window {
+    background: rgba(13, 7, 26, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1.5px solid var(--terminal-border);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 25px rgba(255, 59, 111, 0.18);
+    overflow: hidden;
+    margin: 20px auto 35px;
+    max-width: 860px;
+    position: relative;
+    transition: border-color 0.3s ease;
+}
+
+.terminal-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    overflow-x: auto;
+}
+
+.terminal-action-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #e2e8f0;
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-family: 'Fira Code', monospace;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.terminal-action-btn:hover {
+    background: rgba(255, 59, 111, 0.25);
+    border-color: var(--rose-soft);
+    color: #fff;
+}
+
+.terminal-debug-output {
+    display: none;
+    background: #080312;
+    padding: 12px 18px;
+    border-top: 1px dashed rgba(255, 117, 140, 0.3);
+    font-family: 'Fira Code', monospace;
+    font-size: 0.82rem;
+    color: #86efac;
+    line-height: 1.6;
+}
+
+.terminal-window:hover {
+    border-color: var(--rose-soft);
+}
+
+.terminal-titlebar {
+    background: rgba(18, 10, 32, 0.95);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+.dot.red { background: #ff5f56; }
+.dot.yellow { background: #ffbd2e; }
+.dot.green { background: #27c93f; }
+
+.terminal-tab-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--terminal-tab-bg);
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.82rem;
+    color: var(--terminal-tab-text);
+    border: 1px solid var(--terminal-tab-border);
+    transition: all 0.3s ease;
+}
+
+.terminal-branch {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.8rem;
+    color: #c4b5fd;
+}
+
+.terminal-body {
+    padding: 20px 22px;
+    font-family: 'Fira Code', monospace;
+    font-size: clamp(0.8rem, 2.4vw, 0.92rem);
+    line-height: 1.8;
+    color: #f1f5f9;
+    min-height: 250px;
+    max-height: 420px;
+    overflow-y: auto;
+    position: relative;
+    user-select: text;
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+/* Harmonious Romantic Syntax Highlighting */
+.syntax-comment { color: #94a3b8; font-style: italic; }
+.syntax-keyword { color: #d8b4fe; font-weight: 600; }
+.syntax-function { color: #f472b6; font-weight: 600; }
+.syntax-string { color: var(--gold); }
+.syntax-prop { color: #fda4af; }
+.syntax-type { color: var(--amethyst-light); font-weight: 600; }
+.syntax-constant { color: var(--rose-soft); font-weight: 600; }
+
+.typing-cursor {
+    display: inline-block;
+    width: 9px;
+    height: 1.15em;
+    background: var(--rose-soft);
+    vertical-align: text-bottom;
+    margin-left: 3px;
+    animation: cursorBlink 0.9s infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* ==========================================================
+   GIANT BEATING HEART PARTICLE STAGE
+   ========================================================== */
+.heart-stage {
+    position: relative;
+    width: 100%;
+    max-width: 650px;
+    height: 440px;
+    margin: 10px auto 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    cursor: pointer;
+    user-select: none;
+    padding-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    .heart-stage {
+        height: 340px;
+        margin: 5px auto 15px;
+    }
+}
+
+.heart-pulse-halo {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 59, 111, 0.2) 0%, rgba(255, 59, 111, 0.05) 50%, rgba(255, 59, 111, 0) 75%);
+    pointer-events: none;
+    animation: haloPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes haloPulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(0.95); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.22); opacity: 1; }
+}
+
+.heart-floating-hint {
+    background: rgba(22, 12, 38, 0.82);
+    border: 1px solid rgba(255, 117, 140, 0.4);
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 0.88rem;
+    color: #ffd1dc;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    animation: floatHint 2.5s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 5;
+    text-align: center;
+}
+
+@keyframes floatHint {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+/* ==========================================================
+   THE GRAND CTA BUTTONS: "GỬI KIM NGÂN ❤️" & "TÁI HIỆN"
+   ========================================================== */
+.cta-container {
+    text-align: center;
+    margin: 15px 0 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn-reform-heart {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(252, 211, 77, 0.25));
+    border: 1.5px solid var(--gold);
+    color: #fff;
+    padding: 17px 34px;
+    font-size: 1.15rem;
+    font-weight: 700;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(252, 211, 77, 0.35);
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-reform-heart:hover {
+    transform: translateY(-3px) scale(1.05);
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.45), rgba(252, 211, 77, 0.45));
+    box-shadow: 0 12px 35px rgba(252, 211, 77, 0.55);
+}
+
+.btn-grand-love {
+    position: relative;
+    background: linear-gradient(135deg, #ff3366 0%, #ff5277 50%, #d946ef 100%);
+    color: #ffffff;
+    border: none;
+    padding: 18px 46px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    border-radius: 60px;
+    cursor: pointer;
+    box-shadow: 0 10px 35px var(--rose-glow), 0 0 15px rgba(217, 70, 239, 0.35);
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    letter-spacing: 0.5px;
+    animation: grandPulse 2.2s infinite;
+}
+
+@keyframes grandPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+.btn-grand-love:hover {
+    transform: translateY(-3px) scale(1.07) !important;
+    box-shadow: 0 15px 45px rgba(255, 51, 102, 0.8), 0 0 30px rgba(217, 70, 239, 0.55) !important;
+}
+
+/* Floating Hearts Zone */
+#floatingHeartsZone {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 70;
+}
+
+.interactive-heart {
+    position: absolute;
+    cursor: pointer;
+    pointer-events: auto;
+    font-size: 2.6rem;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    /* animation được set bằng JS inline */
+}
+
+.interactive-heart:hover .heart-love-label {
+    background: rgba(255, 42, 109, 0.25);
+    border-color: rgba(255, 117, 140, 0.7);
+    transform: scale(1.05);
+}
+
+.heart-love-label {
+    font-family: 'Dancing Script', cursive;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #ffd1dc;
+    text-shadow: 0 0 12px rgba(255, 42, 109, 0.9), 0 1px 3px rgba(0,0,0,0.95);
+    white-space: nowrap;
+    background: rgba(10, 4, 22, 0.72);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 117, 140, 0.35);
+    border-radius: 20px;
+    padding: 3px 12px;
+    letter-spacing: 0.02em;
+    pointer-events: none;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+/* Tim bay lên từ dưới: lắc nhẹ sang 2 bên, mờ dần khi đến đỉnh */
+@keyframes heartFloatUp {
+    0%   {
+        opacity: 0;
+        transform: translateX(0) translateY(0) scale(0.7) rotate(-6deg);
+    }
+    8%   { opacity: 1; transform: translateX(calc(var(--sway) * 0.1)) translateY(-4vh) scale(1) rotate(4deg); }
+    25%  { transform: translateX(calc(var(--sway) * 0.4)) translateY(-22vh) scale(1.05) rotate(-5deg); }
+    50%  { transform: translateX(calc(var(--sway) * 0.7)) translateY(-42vh) scale(1.08) rotate(4deg); }
+    75%  { transform: translateX(calc(var(--sway) * 0.9)) translateY(-60vh) scale(1.05) rotate(-3deg); }
+    88%  { opacity: 1; transform: translateX(var(--sway)) translateY(-72vh) scale(1.1) rotate(2deg); }
+    100% {
+        opacity: 0;
+        transform: translateX(var(--sway)) translateY(-82vh) scale(0.5) rotate(0deg);
+    }
+}
+
+/* Câu yêu thương nổi lên tại vị trí vỡ rồi tan */
+.love-burst-msg {
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    transform: translateX(-50%);
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff0f6;
+    text-shadow:
+        0 0 18px rgba(255, 42, 109, 1),
+        0 0 35px rgba(255, 42, 109, 0.6),
+        0 2px 5px rgba(0, 0, 0, 0.9);
+    background: rgba(10, 4, 22, 0.78);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 117, 140, 0.5);
+    border-radius: 40px;
+    padding: 8px 20px;
+    white-space: nowrap;
+    animation: loveMsgFloat 3.2s ease-out forwards;
+}
+
+@keyframes loveMsgFloat {
+    0%   { opacity: 0;   transform: translateX(-50%) translateY(0)    scale(0.5); }
+    12%  { opacity: 1;   transform: translateX(-50%) translateY(-12px) scale(1.15); }
+    40%  { opacity: 1;   transform: translateX(-50%) translateY(-35px) scale(1); }
+    75%  { opacity: 0.8; transform: translateX(-50%) translateY(-65px) scale(0.95); }
+    100% { opacity: 0;   transform: translateX(-50%) translateY(-95px) scale(0.85); }
+}
+
+.wish-progress-bar {
+    display: none;
+    text-align: center;
+    margin-bottom: 30px;
+    background: rgba(22, 12, 38, 0.8);
+    border: 1px solid rgba(255, 117, 140, 0.35);
+    border-radius: 50px;
+    padding: 10px 24px;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wish-progress-bar strong {
+    color: var(--gold);
+    font-family: 'Fira Code', monospace;
+}
+
+/* ==========================================================
+   INTERACTIVE EXPRESS LOVE TABS & MODULES
+   ========================================================== */
+.express-section {
+    margin-top: 40px;
+}
+
+.tab-nav-bar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.tab-pill-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text-dim);
+    padding: 11px 22px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.92rem;
+    font-weight: 600;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tab-pill-btn.active, .tab-pill-btn:hover {
+    background: linear-gradient(135deg, rgba(255, 59, 111, 0.25), rgba(168, 85, 247, 0.25));
+    border-color: var(--rose-soft);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 18px rgba(255, 59, 111, 0.3);
+}
+
+.tab-panel {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Glass Card */
+.glass-box {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1.5px solid var(--card-border);
+    border-radius: 24px;
+    padding: 34px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Tab 1: Love Letter */
+.letter-title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    color: #ffd1dc;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 0 0 15px rgba(255, 59, 111, 0.45);
+}
+
+.letter-content {
+    font-size: 1.1rem;
+    line-height: 2.1;
+    color: var(--text-soft);
+    white-space: pre-line;
+    text-align: justify;
+}
+
+.letter-sign {
+    margin-top: 30px;
+    text-align: right;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem;
+    color: var(--gold);
+}
+
+/* Tab 2: Gallery Cards */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.gallery-card {
+    background: rgba(12, 7, 22, 0.85);
+    border: 1px solid rgba(255, 117, 140, 0.25);
+    border-radius: 20px;
+    padding: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.gallery-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--rose-soft);
+}
+
+.gallery-img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 14px;
+    display: block;
+}
+
+.gallery-caption {
+    margin-top: 14px;
+    font-size: 0.95rem;
+    color: #ffd1dc;
+    font-weight: 600;
+}
+
+/* Tab 3: Vouchers */
+.voucher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.voucher-item {
+    background: linear-gradient(135deg, rgba(255, 59, 111, 0.08), rgba(168, 85, 247, 0.08));
+    border: 1.5px dashed rgba(255, 117, 140, 0.4);
+    border-radius: 20px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.voucher-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--gold);
+}
+
+.voucher-item.used {
+    border-style: solid;
+    border-color: #10b981;
+    opacity: 0.8;
+}
+
+/* Tab 4: Love Note Box */
+.note-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.emoji-selector {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.emoji-btn {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    font-size: 1.8rem;
+    padding: 8px 14px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.emoji-btn.active, .emoji-btn:hover {
+    transform: scale(1.2);
+    border-color: var(--rose-soft);
+    background: rgba(255, 59, 111, 0.2);
+}
+
+.note-textarea {
+    width: 100%;
+    min-height: 120px;
+    background: rgba(10, 6, 20, 0.9);
+    border: 1px solid rgba(255, 117, 140, 0.3);
+    border-radius: 16px;
+    padding: 16px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: none;
+    outline: none;
+    margin-bottom: 18px;
+    transition: border-color 0.25s ease;
+}
+
+.note-textarea:focus {
+    border-color: var(--rose-soft);
+}
+
+.btn-send-note {
+    background: linear-gradient(135deg, var(--rose-main), var(--amethyst));
+    color: white;
+    border: none;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.05rem;
+    cursor: pointer;
+    box-shadow: 0 4px 20px var(--rose-glow);
+    transition: transform 0.25s ease;
+}
+
+.btn-send-note:hover {
+    transform: translateY(-2px) scale(1.04);
+}
+
+.sent-notes-list {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sent-note-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 117, 140, 0.2);
+    border-radius: 12px;
+    padding: 10px 16px;
+    text-align: left;
+    font-size: 0.92rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ==========================================================
+   SWEET WISH POPUP MODAL
+   ========================================================== */
+.wish-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(4, 2, 10, 0.85);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    z-index: 200;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.wish-popup-card {
+    background: linear-gradient(135deg, #19092c 0%, #290a30 50%, #130623 100%);
+    border: 2px solid rgba(255, 117, 140, 0.5);
+    border-radius: 28px;
+    max-width: 560px;
+    width: 100%;
+    padding: 38px 30px;
+    text-align: center;
+    box-shadow: 0 25px 70px rgba(255, 59, 111, 0.45);
+    position: relative;
+    animation: popBounce 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes popBounce {
+    0% { transform: scale(0.7); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.popup-tag-badge {
+    display: inline-block;
+    background: rgba(255, 117, 140, 0.15);
+    border: 1px solid var(--rose-soft);
+    color: #fbcfe8;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 5px 16px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+}
+
+.popup-heart-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+}
+
+.popup-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 14px;
+}
+
+.popup-message {
+    font-size: 1.12rem;
+    line-height: 1.85;
+    color: var(--text-soft);
+    margin-bottom: 26px;
+}
+
+.popup-message strong {
+    color: var(--gold);
+}
+
+.btn-popup-close {
+    background: linear-gradient(135deg, var(--rose-main), var(--amethyst));
+    color: white;
+    border: none;
+    padding: 12px 34px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.btn-popup-close:hover {
+    transform: scale(1.05);
+}
+
+/* Toast */
+.toast {
+    position: fixed;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-20px);
+    background: rgba(255, 59, 111, 0.95);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    z-index: 3000;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-dim);
+    font-size: 0.88rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+footer strong {
+    color: #e2e8f0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================
+   MAGIC 3D GIFT BOX & CERTIFICATE OF LOVE
+   ========================================================== */
+.gift-box-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.gift-box-wrapper {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    margin: 15px auto 25px;
+    cursor: pointer;
+    perspective: 800px;
+}
+
+.gift-box-3d {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(135deg, #e11d48 0%, #be123c 60%, #881337 100%);
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(225, 29, 72, 0.45), 0 0 30px rgba(252, 211, 77, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: giftWiggle 3s infinite ease-in-out;
+}
+
+@keyframes giftWiggle {
+    0%, 80%, 100% { transform: rotate(0deg) scale(1); }
+    85% { transform: rotate(-5deg) scale(1.05); }
+    90% { transform: rotate(5deg) scale(1.08); }
+    95% { transform: rotate(-3deg) scale(1.05); }
+}
+
+.gift-box-3d:hover {
+    transform: scale(1.08) translateY(-6px);
+    box-shadow: 0 20px 50px rgba(225, 29, 72, 0.65), 0 0 45px rgba(252, 211, 77, 0.55);
+}
+
+.gift-ribbon-v {
+    position: absolute;
+    width: 32px;
+    height: 100%;
+    background: linear-gradient(to right, #fbbf24, #fef08a, #d97706);
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+.gift-ribbon-h {
+    position: absolute;
+    height: 32px;
+    width: 100%;
+    background: linear-gradient(to bottom, #fbbf24, #fef08a, #d97706);
+    box-shadow: 0 0 10px rgba(251, 191, 36, 0.5);
+}
+
+.gift-bow {
+    position: absolute;
+    top: -24px;
+    font-size: 3rem;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.4));
+    animation: bowPulse 2s infinite ease-in-out;
+}
+
+@keyframes bowPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.gift-instruction-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(252, 211, 77, 0.4);
+    color: var(--gold);
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-top: 10px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Certificate of Love Modal */
+.certificate-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(5, 2, 12, 0.9);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    z-index: 250;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.certificate-card {
+    background: radial-gradient(circle at 50% 30%, #fffbf0 0%, #fef3c7 60%, #fae8b0 100%);
+    border: 6px double #b45309;
+    border-radius: 24px;
+    max-width: 620px;
+    width: 100%;
+    padding: 40px 32px;
+    text-align: center;
+    color: #451a03;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 60px rgba(251, 191, 36, 0.5);
+    position: relative;
+    animation: popBounce 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    outline: 2px solid #fef08a;
+    outline-offset: -12px;
+}
+
+.cert-header {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #92400e;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.cert-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.4rem, 3.8vw, 2.1rem);
+    font-weight: 900;
+    color: #78350f;
+    line-height: 1.25;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.cert-recipient {
+    font-family: 'Dancing Script', cursive;
+    font-size: clamp(2.4rem, 6vw, 3.5rem);
+    font-weight: 700;
+    color: #be123c;
+    margin: 8px 0 16px;
+    text-shadow: 0 2px 4px rgba(190, 18, 60, 0.2);
+}
+
+.cert-body {
+    font-size: 1.02rem;
+    line-height: 1.8;
+    color: #78350f;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.cert-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(180, 83, 9, 0.35);
+}
+
+.cert-sign-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #92400e;
+    font-weight: 700;
+}
+
+.cert-sign-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
+    color: #b45309;
+    font-weight: 700;
+}
+
+/* Wax Seal Stamp */
+.wax-seal-badge {
+    position: relative;
+    width: 76px;
+    height: 76px;
+    background: radial-gradient(circle, #dc2626 0%, #991b1b 75%, #7f1d1d 100%);
+    border-radius: 50%;
+    box-shadow: 0 6px 18px rgba(153, 27, 27, 0.6), inset 0 2px 4px rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fef08a;
+    font-size: 2rem;
+    border: 3px double #fef08a;
+}
+
+/* ==========================================================
+   CINEMATIC SHOWCASE MODE
+   ========================================================== */
+body.cinematic-mode .top-nav,
+body.cinematic-mode .hero-header,
+body.cinematic-mode .terminal-window,
+body.cinematic-mode .wish-progress-bar,
+body.cinematic-mode .express-section,
+body.cinematic-mode footer {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    display: none;
+}
+
+body.cinematic-mode .main-wrapper {
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+body.cinematic-mode .heart-stage {
+    height: 520px;
+    max-width: 800px;
+}
+
+.cinematic-exit-btn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    cursor: pointer;
+    backdrop-filter: blur(12px);
+    z-index: 500;
+    display: none;
+    transition: all 0.25s ease;
+}
+
+body.cinematic-mode .cinematic-exit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cinematic-exit-btn:hover {
+    background: rgba(255, 42, 109, 0.4);
+    border-color: var(--rose-soft);
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .top-nav { padding: 10px 16px; }
+    .brand-badge span { display: none; }
+    .main-wrapper { padding: 80px 14px 60px; }
+    .terminal-body { font-size: 0.8rem; padding: 16px; min-height: 300px; }
+    .btn-grand-love { font-size: 1.05rem; padding: 15px 30px; }
+    .anniversary-ribbon { font-size: 0.82rem; gap: 8px; }
+    .wish-popup-card { padding: 28px 18px; }
+    .popup-title { font-size: 1.4rem; }
+    .popup-message { font-size: 1rem; }
+    .glass-box { padding: 22px 18px; }
+    .letter-title { font-size: 2rem; }
+    .letter-content { font-size: 1rem; line-height: 1.85; }
+}
